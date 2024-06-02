@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 function Card({ username, btntext = "visit me" }) {
   return (
     <div className="relative h-[400px] w-[300px] rounded-md">
@@ -20,5 +21,10 @@ function Card({ username, btntext = "visit me" }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  username: PropTypes.string.isRequired,
+  btntext: PropTypes.string.isRequired,
+};
 
 export default Card;
